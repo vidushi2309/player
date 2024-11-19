@@ -1,0 +1,127 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and layout */
+  body {
+    width: 100%;
+    background-color: #e6f2ff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #1891d1;
+    color: white;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 25px;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar ul li a:hover, .sidebar ul li.active a {
+    background-color: #e6f2ff;
+    color: #1891d1;
+  }
+  
+  /* Main content area */
+  .main-content {
+    position: relative;
+    left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #e6f2ff;
+  }
+  
+  h1, h2 {
+    color: #002960;
+  }
+  
+  /* Table styles for training schedule */
+  .schedule-table {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #1891d1;
+    color: white;
+  }
+  
+  td {
+    background-color: #ceecf6;
+  }
+  
+  /* Card layout for stats */
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #9cdef5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(100% / 4 - 15px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 0;
+      padding: 10px;
+    }
+    
+    .schedule-table {
+      overflow-x: auto;
+    }
+  }
+  
